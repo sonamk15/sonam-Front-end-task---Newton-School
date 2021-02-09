@@ -1,19 +1,9 @@
 import React, {useState} from 'react';
 import {Row, Col, FormControl, Button} from 'react-bootstrap';
 
-const CitySelector = () => {
+const CitySelector = ({onSearch}) => {
     const [city, setCity] = useState('');
-    const [results, setResults] = useState(null);
-  
-    const onSearch = () => {
-      fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=6f7d192ff98609434f15c2541778074f&units=metric`
-      )
-        .then((response) => response.json())
-        // update the results
-        .then((results) =>  console.log(results));
-    };
-    
+
     return (
       <>
         <Row>
@@ -23,7 +13,7 @@ const CitySelector = () => {
         </Row>
   
         <Row>
-          <Col xs={4} className="text-center">
+          <Col xs={4}>
             <FormControl
               placeholder="Enter city"
               onChange={(event) => setCity(event.target.value)}
@@ -34,11 +24,11 @@ const CitySelector = () => {
   
         <Row>
           <Col>
-            <Button onClick={onSearch}>Check Weather</Button>
+            <Button onClick={() => onSearch(city)}>Check Weather</Button>
           </Col>
         </Row>
       </>
     );
   };
 
-  export default CitySelector;
+export default CitySelector;
