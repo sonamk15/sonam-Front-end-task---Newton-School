@@ -7,7 +7,7 @@ const CitySelector = ({onSearch}) => {
     return (
       <>
         <Row>
-          <Col>
+          <Col style={{fontFamily:'serif' ,color:'#0E3F44'}}>
             <h1>Search your city</h1>
           </Col>
         </Row>
