@@ -22,7 +22,6 @@ const UseFetch = (initialUrl) => {
         });
   }, [url]);
 
-  // console.log(data)
   return { data, error, setUrl };
 };
 

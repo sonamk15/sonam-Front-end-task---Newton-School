@@ -16,7 +16,6 @@ const WeatherCard = ({dt, temp_min, temp_max, main, icon}) => {
         <Card.Title style={{fontWeight:'bold'}}>{main}</Card.Title>
         <p>
           {date.toLocaleDateString()} 
-          {/* - {date.toLocaleTimeString()} */}
         </p>
         <p>Min: {temp_min}°C</p>
         <p>Max: {temp_max}°C</p>

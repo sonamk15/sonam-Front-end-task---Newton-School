@@ -10,8 +10,7 @@ const CitySelector = ({onSearch}) => {
           <Col style={{fontFamily:'serif' ,color:'#0E3F44'}}>
             <h1>Search your city</h1>
           </Col>
-        </Row>
-  
+        </Row> 
         <Row>
           <Col xs={4}>
             <FormControl
